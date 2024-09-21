@@ -1,0 +1,127 @@
+/* Light and Dark Theme Variables */
+body.theme-light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --button-bg-color: #007aff;
+  --button-text-color: #ffffff;
+  --footer-bg-color: #f1f1f1;
+  --footer-border-color: #cccccc;
+}
+
+body.theme-dark {
+  --bg-color: #1c1c1e;
+  --text-color: #f5f5f7;
+  --button-bg-color: #0a84ff;
+  --button-text-color: #ffffff;
+  --footer-bg-color: #2c2c2e;
+  --footer-border-color: #48484a;
+}
+
+/* General Body Styling */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'SF Pro Text', sans-serif; /* iOS 16-style font */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  text-align: center; /* Centering content for a cleaner UI */
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+input[type="tel"], input[type="file"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+input[type="tel"]:focus, textarea:focus {
+  outline: none;
+  border-color: #007aff;
+}
+
+/* Button Styling */
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border-radius: 12px;
+  padding: 12px 25px;
+  border: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: lighten(var(--button-bg-color), 10%);
+}
+
+/* Footer Styling */
+footer {
+  background-color: var(--footer-bg-color);
+  border-top: 1px solid var(--footer-border-color);
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+footer p {
+  font-size: 1em;
+}
+
+/* Theme Switcher Styling */
+.theme-toggle {
+  margin-top: 20px;
+}
+
+.theme-toggle button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.theme-toggle button:hover {
+  background-color: lighten(var(--button-bg-color), 10%);
+}
+
+/* Loader Animation */
+#loading-listener .loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+  }
