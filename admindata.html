@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - SBL Trading Bots</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+<body class="theme-light">
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+    <p>Manage uploaded bot performance images and descriptions.</p>
+
+    <form id="upload-form">
+      <input type="file" id="image-upload" accept="image/*">
+      <textarea id="image-description" placeholder="Write a description" rows="4"></textarea>
+      <button type="submit">Upload</button>
+    </form>
+
+    <div id="admin-functions">
+      <h2>Uploaded Content</h2>
+      <ul id="uploaded-content">
+        <!-- Uploaded images and descriptions will appear here -->
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 SBL Trading Bots. Admin Panel</p>
+    <div class="theme-toggle">
+      <label>Theme: </label>
+      <button>Light/Dark Mode</button>
+    </div>
+  </footer>
+</body>
+</html>
